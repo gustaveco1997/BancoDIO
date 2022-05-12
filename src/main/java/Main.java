@@ -1,4 +1,4 @@
-package br.com.estudos.entities;
+import br.com.estudos.entities.*;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -20,8 +20,8 @@ public class Main {
                 .dataNascimento(LocalDate.of(1997, 9, 15))
                 .cpf("12345678909")
                 .build();
-        ContaAbstract primeiraConta = inter.criarConta(cliente, new Poupanca());
-        ContaAbstract segundaConta = inter.criarConta(cliente, new Corrente());
+        IConta primeiraConta = inter.criarConta(cliente, new Poupanca());
+        IConta segundaConta = inter.criarConta(cliente, new Corrente());
         inter.listagemClientes();
 
         primeiraConta.depositar(100d);

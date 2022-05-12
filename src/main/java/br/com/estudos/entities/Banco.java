@@ -1,13 +1,13 @@
 package br.com.estudos.entities;
 
-import lombok.Builder;
 import lombok.Data;
+import services.IServicoBanco;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class Banco implements IServicosBanco {
+public class Banco implements IServicoBanco {
     private int codigo;
     private String nome;
     private String cidade;

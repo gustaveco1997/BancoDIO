@@ -60,7 +60,7 @@ public class ContaAbstract implements IConta {
     }
 
     @Override
-    public void transferir(ContaAbstract contaDestino, double valor) {
+    public void transferir(IConta contaDestino, double valor) {
         sacar(valor);
         contaDestino.depositar(valor);
 
